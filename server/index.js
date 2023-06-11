@@ -53,20 +53,20 @@ app.put('/edit', (req, res) => {
             res.send(result)
         }
     })
-    db.query("UPDATE tickets SET description = ? WHERE id = ?", [description, id], (err, result) => {
-        if (err) {
-            console.log(err)
-        } else {
-            res.send(result)
-        }
-    })
-    db.query("UPDATE tickets SET contact = ? WHERE id = ?", [contact, id], (err, result) => {
-        if (err) {
-            console.log(err)
-        } else {
-            res.send(result)
-        }
-    })
+    // db.query("UPDATE tickets SET description = ? WHERE id = ?", [description, id], (err, result) => {
+    //     if (err) {
+    //         console.log(err)
+    //     } else {
+    //         res.send(result)
+    //     }
+    // })
+    // db.query("UPDATE tickets SET contact = ? WHERE id = ?", [contact, id], (err, result) => {
+    //     if (err) {
+    //         console.log(err)
+    //     } else {
+    //         res.send(result)
+    //     }
+    // })
     db.query("UPDATE tickets SET timestamp = CURRENT_TIMESTAMP WHERE id = id", (err, result) => {
         if (err) {
             console.log(err)
